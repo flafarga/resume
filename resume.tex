@@ -1,6 +1,6 @@
 % Resume in Latex
 % Author : Francisco Lafarga
-% Based of: https://github.com/sb2nov/resume
+% Based off of: https://github.com/sb2nov/resume
 % License : MIT
 
 \documentclass[letterpaper,11pt]{article}
@@ -22,6 +22,15 @@
 \usepackage{multicol}
 \usepackage{xcolor}
 \usepackage{soul}
+
+%----------DEFINE VARIABLES----------
+\def\name{Name}
+\def\surname{Surname}
+\def\phonePrefix{34}
+\def\phone{000 00 00 00}
+\def\email{\ul{my-email@domain.com}}
+\def\linkedin{\ul{linkedin.com/in/my-linkedin}}
+\def\personalPage{\ul{my-personal-page.com}} %TODO
 
 % Blue color
 \definecolor{colorSection}{HTML}{4c73b2} % Color section  4a71b2
@@ -111,10 +120,10 @@
 \begin{document}
 
 	\begin{center}
-		{\Huge \scshape {\color{colorNombre}Name} Surname} \\ \vspace{1pt}
+		{\Huge \scshape {\color{colorNombre}\name} \surname} \\ \vspace{1pt}
 		\vspace{0.4cm}
-		\small \raisebox{-0.1\height}{\color{colorSimbolos}{\faPhone}}\ +00 000 00 00 00 ~ \href{mailto:email@mail.com}{\raisebox{-0.2\height}{\color{colorSimbolos}{\faEnvelope}}\  \ul{my-email@domain.com}} ~ 
-		\href{https://linkedin.com/in//}{\raisebox{-0.2\height}{\color{colorSimbolos}{\faLinkedin}}\ \ul{linkedin.com/in/my-linkedin}}  ~
+		\small \raisebox{-0.1\height}{\color{colorSimbolos}{\faPhone}}\ +\phonePrefix ~ \phone ~ \href{mailto:email@mail.com}{\raisebox{-0.2\height}{\color{colorSimbolos}{\faEnvelope}}\  {\email}} ~ 
+		\href{https://linkedin.com/in//}{\raisebox{-0.2\height}{\color{colorSimbolos}{\faLinkedin}}\ {\linkedin}}  ~
 		\vspace{0.2cm}
 	\end{center}
 
