@@ -1,0 +1,93 @@
+\documentclass[letterpaper,11pt]{article}
+
+%----------PACKAGES----------
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage{soul}
+
+% Blue color
+\definecolor{sectionColor}{HTML}{4c73b2}
+\definecolor{symbolsColor}{HTML}{3c6bac}
+\definecolor{lineColor}{HTML}{4c73b2}
+\definecolor{nameColor}{HTML}{3c6bac}
+\definecolor{bulletColor}{HTML}{5078c4}
+
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+%----------PAGE STYLE----------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\setlength{\tabcolsep}{0in}
+
+%----------UTILS----------
+\titleformat{\section}{
+	\vspace{10pt}\scshape\raggedright\color{sectionColor}\Large
+}{}{0em}{}[\color{lineColor}\titlerule \vspace{-5pt}]
+\pdfgentounicode=1 % pdf generated is machine readable/ATS parsable
+%---- UL STYLE ----------
+\setul{0.5ex}{0.2ex}
+\setulcolor{symbolsColor}
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+	\item\small{
+		{#1 \vspace{-2pt}}
+	}
+}
+
+\newcommand{\resumeSubheading}[4]{
+	\vspace{-2pt}\item
+	\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & \textbf{\small #2} \\
+		\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+	\item
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\textit{\small#1} & \textit{\small #2} \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+	\item
+	\begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+		\small#1 & \textbf{\small #2}\\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\color{bulletColor}\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\color{bulletColor}\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+	\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+	\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-20pt}}
