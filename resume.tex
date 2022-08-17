@@ -33,11 +33,11 @@
 \def\personalPage{\ul{my-personal-page.com}} %TODO
 
 % Blue color
-\definecolor{colorSection}{HTML}{4c73b2} % Color section  4a71b2
-\definecolor{colorSimbolos}{HTML}{3c6bac} % Color section  4a71b2
-\definecolor{colorLinea}{HTML}{4c73b2} % E5284C
-\definecolor{colorNombre}{HTML}{3c6bac}
-\definecolor{colorPuntos}{HTML}{5078c4}
+\definecolor{sectionColor}{HTML}{4c73b2}
+\definecolor{symbolsColor}{HTML}{3c6bac}
+\definecolor{lineColor}{HTML}{4c73b2}
+\definecolor{nameColor}{HTML}{3c6bac}
+\definecolor{bulletColor}{HTML}{5078c4}
 
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
@@ -72,12 +72,12 @@
 
 %----------UTILS----------
 \titleformat{\section}{
-	\vspace{10pt}\scshape\raggedright\color{colorSection}\Large
-}{}{0em}{}[\color{colorLinea}\titlerule \vspace{-5pt}]
+	\vspace{10pt}\scshape\raggedright\color{sectionColor}\Large
+}{}{0em}{}[\color{lineColor}\titlerule \vspace{-5pt}]
 \pdfgentounicode=1 % pdf generated is machine readable/ATS parsable
 %---- UL STYLE ----------
 \setul{0.5ex}{0.2ex}
-\setulcolor{colorSimbolos}
+\setulcolor{symbolsColor}
 
 %-------------------------
 % Custom commands
@@ -109,8 +109,8 @@
 	\end{tabular*}\vspace{-7pt}
 }
 
-\renewcommand\labelitemi{$\vcenter{\hbox{\color{colorPuntos}\tiny$\bullet$}}$}
-\renewcommand\labelitemii{$\vcenter{\hbox{\color{colorPuntos}\tiny$\bullet$}}$}
+\renewcommand\labelitemi{$\vcenter{\hbox{\color{bulletColor}\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\color{bulletColor}\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 	\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
@@ -120,10 +120,10 @@
 \begin{document}
 
 	\begin{center}
-		{\Huge \scshape {\color{colorNombre}\name} \surname} \\ \vspace{1pt}
+		{\Huge \scshape {\color{nameColor}\name} \surname} \\ \vspace{1pt}
 		\vspace{0.4cm}
-		\small \raisebox{-0.1\height}{\color{colorSimbolos}{\faPhone}}\ +\phonePrefix ~ \phone ~ \href{mailto:email@mail.com}{\raisebox{-0.2\height}{\color{colorSimbolos}{\faEnvelope}}\  {\email}} ~ 
-		\href{https://linkedin.com/in//}{\raisebox{-0.2\height}{\color{colorSimbolos}{\faLinkedin}}\ {\linkedin}}  ~
+		\small \raisebox{-0.1\height}{\color{symbolsColor}{\faPhone}}\ +\phonePrefix ~ \phone ~ \href{mailto:email@mail.com}{\raisebox{-0.2\height}{\color{symbolsColor}{\faEnvelope}}\  {\email}} ~ 
+		\href{https://linkedin.com/in//}{\raisebox{-0.2\height}{\color{symbolsColor}{\faLinkedin}}\ {\linkedin}}  ~
 		\vspace{0.2cm}
 	\end{center}
 
